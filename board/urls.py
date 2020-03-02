@@ -8,6 +8,8 @@ app_name = 'board'
 
 urlpatterns = [
     url(r'^$', views.board.as_view(), name='board'),
+    url(r'^insert/$', views.check_post, name='board_insert'),
+
 
 ]
 

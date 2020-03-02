@@ -11,6 +11,9 @@ class List(models.Model):
     priority = models.IntegerField(db_column='PRIORITY', blank=True, null=True)  # Field name made lowercase.
     end_date = models.DateField(db_column='END_DATE', blank=True, null=True)  # Field name made lowercase.
 
+    def save(self):
+        self.save()
+
     class Meta:
         managed = False
         db_table = 'list'
