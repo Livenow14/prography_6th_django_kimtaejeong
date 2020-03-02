@@ -2,12 +2,12 @@
 {% load staticfiles %}
 {% block main %}
 
-<div class="col-md-4">
+<div class="col-md-12">
     <div class="container">
         <div id="example1" class="list-group col">
 
             {% for list in list %}
-            <div class="list-group-item"><input type="checkbox" pk={{list.no}} name="no_endDate_non_complete" value={{list.title}}> {{list.title}}</div>
+            <div class="list-group-item"><input type="checkbox" name="{{list.title}}" value={{list.title}}> <a href="{% url 'board:board_detail' pk=list.no %}">  {{list.title}}</a></div>
             {% endfor %}
 
         </div>
@@ -18,5 +18,5 @@
             일정추가
         </button>
     </div>
-
-    {% endblock main %}
+</div>
+{% endblock main %}

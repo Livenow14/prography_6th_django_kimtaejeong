@@ -1,0 +1,13 @@
+{% extends 'main/common/header.html' %}
+{% load staticfiles %}
+{% block main %}
+<section id="blog">
+  <div class="container">
+            {{list}}
+           <h2> {{ list.title }}</h2>
+           <p> {{ list.content }}</p><br>
+            <h2><a href="{%url 'board:board_update' pk=list.pk%}"> 수정 </a> </td></h2>
+</div>
+</section>
+
+{% endblock main %}
