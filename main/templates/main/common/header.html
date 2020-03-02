@@ -1,0 +1,70 @@
+<html lang="ko">
+
+{% load staticfiles %}
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!--Fontawesom-->
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+
+    <!--Animated CSS-->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animate.min.css' %}">
+
+    <!-- Bootstrap -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <!--Bootstrap Carousel-->
+    <link type="text/css" rel="stylesheet" href="{% static 'css/carousel.css' %}" />
+
+    <link rel="stylesheet" href="{% static 'css/isotope/style.css' %}">
+
+    <!--Main Stylesheet-->
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <!--Responsive Framework-->
+    <link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script>
+
+
+
+    </script>
+    <style type="text/css">
+        #container {
+            min-width: 310px;
+            max-width: 800px;
+            height: 400px;
+            margin: 0 auto
+        }
+        input[type=text] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        .list-group-item{
+            width : 40%;
+        }
+    </style>
+
+
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"></a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="{% url 'main:main' %}">todo main</a></li>
+            <li><a href="{% url 'board:board' %}">todo list</a></li>
+        </ul>
+    </div>
+</nav>
+{% block main %}
+
+{% endblock main %}
+</body>
