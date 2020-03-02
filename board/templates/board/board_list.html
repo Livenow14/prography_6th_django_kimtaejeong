@@ -2,10 +2,14 @@
 {% load staticfiles %}
 {% block main %}
 
-<div class="alert alert-info">
-    <strong>마감이 지난 일정!</strong> {{ over_end_day }}
-</div>
-<div class="alert alert-info">
-    <strong>마감이 가까운 일정!</strong> {{ close_end_day }}
-</div>
-{% endblock main %}
+<div class="col-md-4">
+    <div class="container">
+        <div id="example1" class="list-group col">
+
+            {% for list in list %}
+            <div class="list-group-item"><input type="checkbox" pk={{list.no}} name="no_endDate_non_complete" value={{list.title}}> {{list.title}}</div>
+            {% endfor %}
+
+        </div>
+    </div>
+    {% endblock main %}
