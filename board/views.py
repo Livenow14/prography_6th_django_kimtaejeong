@@ -3,6 +3,11 @@ from django.views import generic
 from .models import List
 from .forms import Form
 
+# delete view
+class board_delete(generic.DeleteView):
+    model = List
+    success_url = '/board/'
+    context_object_name = 'list'
 #board view
 class board(generic.TemplateView):
     def get(self, request, *args, **kwargs):
