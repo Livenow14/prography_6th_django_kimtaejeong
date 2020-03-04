@@ -1,4 +1,4 @@
-"""crud_api URL Configuration
+"""todoSubject_restfulAPI URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/2.1/topics/http/urls/
@@ -13,25 +13,11 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-"""from django.contrib import admin
+from django.contrib import admin
 from django.conf.urls import include, url
 from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-
-]
-"""
-
-from django.conf.urls import url,include
-from django.contrib import admin
-from rest_framework import routers
-from crud.views import Crud
-
-router = routers.DefaultRouter()
-router.register('crud',Crud) # prefix = movies , viewset = MovieViewSet
-
-urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^',include(router.urls)),
+    path('', include('crud.urls')),
 ]
