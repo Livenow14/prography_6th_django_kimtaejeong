@@ -10,7 +10,7 @@ app_name = 'crud'
 urlpatterns = [
     url('api-auth/', include('rest_framework.urls')),
     url(r'^$', views.Crud.as_view(), name='crud'),
-    url(r'^crud_list/$', views.Crud.as_view(), name='crud_list'),
+    url(r'^crud_list/$', views.Crud_list.as_view(), name='crud_list'),
     url(r'^crud_list/create/$', views.Crud_create.as_view(), name='crud_create'),
     url(r'^crud_list/(?P<id>\d+)/$', views.Crud_detail.as_view(), name='crud_detail'),
     url(r'^crud_list/(?P<id>\d+)/update/$', views.Crud_update.as_view(), name='crud_update'),
