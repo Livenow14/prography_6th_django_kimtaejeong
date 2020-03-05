@@ -1,22 +1,18 @@
 from .models import List
 from .serializers import MySerializer, MyDetailSerializer, MyCreateSerializer
 from rest_framework.generics import ListAPIView, RetrieveAPIView, UpdateAPIView, DestroyAPIView, CreateAPIView
+
 from .pagination import ListPageNumberPagination
 
 class Crud(ListAPIView):
-    queryset = List.objects.all()
+    queryset = List.objects.all().order_by('-created_at')
     serializer_class = MySerializer
     pagination_class = ListPageNumberPagination
-
 
 class Crud_list(ListAPIView):
-    queryset = List.objects.all()
+    queryset = List.objects.all().order_by('-created_at')
     serializer_class = MySerializer
     pagination_class = ListPageNumberPagination
-
-
-
-
 
 class Crud_detail(RetrieveAPIView):
     lookup_field = 'id'
