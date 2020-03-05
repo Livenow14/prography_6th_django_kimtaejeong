@@ -8,7 +8,9 @@ app_name = 'crud'
 #router = routers.DefaultRouter()
 #router.register(r'todfo', views.Todo_subject_restful_main)
 urlpatterns = [
-    url('api-auth/', include('rest_framework.urls')),
+  #  url('api-auth/', include('rest_framework.urls')),
+    url(r'^rest-auth/', include('rest_auth.urls')), # Login, Logout 관련 기능
+    url(r'^rest-auth/registration/', include('rest_auth.registration.urls')), # SignUp 관련 기능
     url(r'^$', views.Crud.as_view(), name='crud'),
     url(r'^crud_list/$', views.Crud_list.as_view(), name='crud_list'),
     url(r'^crud_list/create/$', views.Crud_create.as_view(), name='crud_create'),
