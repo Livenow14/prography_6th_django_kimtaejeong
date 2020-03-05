@@ -75,3 +75,18 @@ http://ec2-15-165-113-25.ap-northeast-2.compute.amazonaws.com/crud_list/{id}/upd
 ```groovy
 http://ec2-15-165-113-25.ap-northeast-2.compute.amazonaws.com/crud_list/{id}/delete
 ```
+
+### 로그인, 로그아웃
+구현을 하였지만 ,아직 완벽하게 구현을 하지 못한 상태입니다. 
+```groovy
+http://ec2-15-165-113-25.ap-northeast-2.compute.amazonaws.com/rest-auth/registration
+```
+을 통해 등록하고 
+```groovy
+http://ec2-15-165-113-25.ap-northeast-2.compute.amazonaws.com/rest-auth/lgoin
+```
+을 통해 로그인 할 수 있지만. 
+등록, 로그인 이후의 과정을 작성하지 않아 500에러가 발생합니다. 
+
+서버 배포를 무중단으로 하려고 하나 완벽히 만들지 못한 관계로.
+면접 전까지만 배포할 계획입니다. 
