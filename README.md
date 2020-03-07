@@ -90,3 +90,5 @@ http://ec2-15-165-113-25.ap-northeast-2.compute.amazonaws.com/rest-auth/lgoin
 
 서버 배포를 무중단으로 하려고 하나 완벽히 만들지 못한 관계로.
 면접 전까지만 배포할 계획입니다. 
+
+------- 배포중단 ---------
